@@ -2,7 +2,7 @@ var gaussQuadrature = require('gauss-quadrature');
 var vec3 = require('gl-vec3');
 
 module.exports = function(positions, order = 5) {
-  var gaussRule = gaussQuadrature(5);
+  var gaussRule = gaussQuadrature(order);
 
   var point12 = new Array(3);
   vec3.add(point12, positions[0], positions[1]);
